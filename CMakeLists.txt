@@ -14,10 +14,8 @@ include_directories("lib/b2d/Box2D/")
 set(B2D_INCS "lib/b2d/Box2D/")
 link_directories("${CMAKE_BINARY_DIR}/lib/sfml/lib")
 
-
-
-
-add_executable(CMakeSFMLProject src/main.cpp)
+add_executable(CMakeSFMLProject src/main.cpp
+)
 target_link_libraries(CMakeSFMLProject PRIVATE sfml-graphics Box2D)
 target_compile_features(CMakeSFMLProject PRIVATE cxx_std_17)
 if (WIN32 AND BUILD_SHARED_LIBS)
